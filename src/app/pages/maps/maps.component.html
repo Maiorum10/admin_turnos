@@ -1,0 +1,30 @@
+<div class="header bg-gradient-success pb-5 pt-3 pt-md-5">
+  <br>
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="cent"  id="htmlData" #htmlData>
+        <div class="col-lg-6">
+          <div class="card card-lift--hover shadow border-0">
+            <div class="card-body py-6">
+              <div class="contenedor-flexbox">
+                <div><img src="./assets/img/mocha.png" width="100"></div>
+                <div class="cent"><h2 class="text-dark text-uppercase">GAD Municipal del cantón Mocha</h2></div>
+              </div><h2 class="text-dark text-uppercase cent" id="titulo">Nuevo timbre:</h2>
+              <div id="content">
+                <h1 class="text-center">Código:</h1>
+                <h1 class="text-center">{{numero}}</h1>
+                <div class="code128auto_containter">
+                </div>
+              </div>
+              <div class="cent">
+                <button type="button" id="btn_generar" class="btn btn-primary my-4" (click)="generar()">Generar</button>
+                <button type="button" id="btn_pdf" class="btn btn-primary my-4" (click)="nuevo()">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

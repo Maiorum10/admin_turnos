@@ -1,0 +1,47 @@
+<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="cent">
+        <div class="col-lg-6">
+          <div class="card card-lift--hover shadow border-0">
+            <div class="card-body py-5">
+              <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                <i class="ni ni-building"></i>
+              </div>
+              <h2 class="text-primary">Turnos del día: {{nuevo}}</h2>
+              <table class="table table-responsive" id="table" style="width: 100%; height: 250px; overflow: auto">
+                <thead style="background-color: #2e1d50; color: white;">
+                  <td>Numero</td>
+                  <td>Nombre</td>
+                  <td>Apellido</td>
+                  <td>Atención en minutos</td>
+                </thead>
+                <tr [ngClass]="{'resaltado': turnos.estado == 1}" *ngFor="let turno of turnos; let first = first; let last = last;">
+                    <td class="text-uppercase">{{turno.numero}}</td>
+                    <td class="text-uppercase">{{turno.nombre}}</td>
+                    <td class="text-uppercase">{{turno.apellido}}</td>
+                    <td class="text-uppercase">{{turno.tiempo}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-lift--hover shadow border-0">
+            <div class="card-body py-5">
+              <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                <i class="ni ni-building"></i>
+              </div>
+              <h3 class="text-primary">Seleccionar fecha:</h3>
+              <div class="cent"><input class="in" [(ngModel)]="nuevo" placeholder="{{nuevo}}" type="date"></div>
+              <div class="cent"><button type="button" class="btn btn-primary my-4" (click)="fecha()">Consultar</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+

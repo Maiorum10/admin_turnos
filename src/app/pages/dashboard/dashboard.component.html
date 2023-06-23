@@ -1,0 +1,50 @@
+<div class="header bg-gradient-success pb-5 pt-3 pt-md-5">
+  <h2 class="text-primary">Turnos para hoy: {{turnos_diarios}}</h2>
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="cent">
+        <div class="col-lg-6">
+          <div class="card card-lift--hover shadow border-0">
+            <div class="card-body py-6">
+              <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                <i class="ni ni-building"></i>
+              </div>
+              <h2 class="text-primary">Turnos de hoy:</h2>
+              <table class="table table-responsive" id="table" style="width: 100%; height: 260px; overflow: auto">
+                <thead style="background-color: #2e1d50; color: white;">
+                  <td>Número</td>
+                  <td>Nombre</td>
+                  <td>Apellido</td>
+                  <td>Cédula</td>
+                </thead>
+                <tr [ngClass]="{'resaltado': turnos.estado == 1}" *ngFor="let turnos of turnos_hoy; let first = first; let last = last;">
+                    <td class="text-uppercase">{{turnos.numero}}</td>
+                    <td class="text-uppercase">{{turnos.nombre}}</td>
+                    <td class="text-uppercase">{{turnos.apellido}}</td>
+                    <td class="text-uppercase">{{turnos.cedula}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card card-lift--hover shadow border-0">
+            <div class="card-body py-6">
+              <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                <i class="ni ni-building"></i>
+              </div>
+              <h2 class="text-primary text-uppercase">{{departamento}}</h2>
+              <h1 class="text-center">Turno:</h1>
+              <h1 class="text-center">{{numero}}</h1>
+              <h2 class="text-center text-uppercase">{{nombre}} {{apellido}}</h2>
+              <h2 class="text-center">{{cedula}}</h2>
+              <div class="cent"><button type="button" class="btn btn-primary my-4" (click)="consultarUltimo()">Siguiente</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

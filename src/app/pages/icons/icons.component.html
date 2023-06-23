@@ -1,0 +1,37 @@
+<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="cent">
+        <div class="col-lg-4">
+          <div class="card card-lift--hover shadow border-0">
+            <div class="card-body py-5">
+              <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                <i class="ni ni-building"></i>
+              </div>
+              <h3 class="text-primary text-uppercase">{{departamento}}</h3>
+              <h1 class="text-center">Turnos diarios:</h1>
+              <h1 class="text-center">{{turnos}}</h1>
+              <h5 class="text-center">{{hoy}}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-lift--hover shadow border-0">
+            <div class="card-body py-5">
+              <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                <i class="ni ni-building"></i>
+              </div>
+              <h3 class="text-primary">Actualizar turnos diarios</h3>
+              <div class="cent"><input class="in" [(ngModel)]="nuevo" placeholder="{{nuevo}}" maxlength="3" type="text"
+              pattern="\d*" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></div>
+              <div class="cent"><button type="button" class="btn btn-primary my-4" (click)="guardar()">Guardar</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+
